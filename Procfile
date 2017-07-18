@@ -1,1 +1,1 @@
-web: PORT=80 sudo node index.js
+web: node index.js
