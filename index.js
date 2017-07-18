@@ -26,6 +26,10 @@ function handleEvent(event) {
 
   console.log(event);
 
+  if (event.replyToken === "00000000000000000000000000000000") {
+    return {"verifyMode": true}
+  }
+
   return client.replyMessage(event.replyToken, {
     type: 'text',
     text: event.message.text
