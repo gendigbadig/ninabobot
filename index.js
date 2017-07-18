@@ -37,6 +37,7 @@ function handleEvent(event) {
         text:
           `
 Info untuk ${event.message.text} :
+
 tegangan cinta tak dapat dihindar lagi
 kala ku coba menyapamu astuti
 seakan meledak detak jantungku karenamu
@@ -47,12 +48,13 @@ sesaat setelah ku kenal denganmu
       });
       break;
 
-    case /Tegangan/.test(event.message.text):
+    case "Tegangan travo1":
       return client.replyMessage(event.replyToken, {
         type: 'text',
         text:
 `
 Info untuk ${event.message.text} sbb:
+
 Phasa R : 20,5 kV
 Phasa S : 20,4 kV
 Phasa T : 20,5 kV
