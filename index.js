@@ -31,24 +31,24 @@ function handleEvent(event) {
   }
 
   switch (event.message.text) {
-    case "Aku ngantuk" || "aku ngantuk" || "ngantuk" || "hoam":
+    case "Aku ngantuk" || "aku ngantuk" || "Ngantuk" || "ngantuk" || "hoam" || "Hoam":
       return client.replyMessage(event.replyToken, {
         type: 'text',
         text: `Nina bobo oh nina bobo 🎶
-        Kalau tidak bobo digigit nyamuk 🎶
-        Nina bobo oh nina bobo 🎶
-        Kalau tidak bobo digigit nyamuk 🎶
+Kalau tidak bobo digigit nyamuk 🎶
+Nina bobo oh nina bobo 🎶
+Kalau tidak bobo digigit nyamuk 🎶
         
-        🛌💤😴`
+🛌💤😴`
       });
       break;
-    case "Siapa aku?" || "siapa aku" || "whoami":
+    case "Siapa aku?" || "siapa aku?"  || "siapa aku" || "Siapa aku" || "whoami" || "Whoami":
       return Promise.resolve(client.getProfile(event.source.userId))
         .then((profile) => {
           let displayName = profile.displayName;
           return client.replyMessage(event.replyToken, {
             type: 'text',
-            text: 'Aku kenal! Nama kamu adalah : ' + displayName
+            text: 'Aku kenal! Nama kamu adalah ' + displayName
           });
         });
       break;
