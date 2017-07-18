@@ -30,10 +30,34 @@ function handleEvent(event) {
     return {"verifyMode": true}
   }
 
-  return client.replyMessage(event.replyToken, {
-    type: 'text',
-    text: event.message.text
-  });
+  switch (event.message.text) {
+    case "Aku ngantuk" || "aku ngantuk" || "ngantuk" || "hoam":
+      return client.replyMessage(event.replyToken, {
+        type: 'text',
+        text: `Nina bobo oh nina bobo 🎶
+        Kalau tidak bobo digigit nyamuk 🎶
+        Nina bobo oh nina bobo 🎶
+        Kalau tidak bobo digigit nyamuk 🎶
+        
+        🛌💤😴`
+      });
+      break;
+    case "Siapa aku?" || "siapa aku" || "whoami":
+      return Promise.resolve(client.getProfile(event.source.userId))
+        .then((profile) => {
+          let displayName = profile.displayName;
+          return client.replyMessage(event.replyToken, {
+            type: 'text',
+            text: 'Aku kenal! Nama kamu adalah : ' + displayName
+          });
+        });
+      break;
+    default:
+      return client.replyMessage(event.replyToken, {
+        type: 'text',
+        text: 'Aku tidak paham, jadi aku mengulang apa yang kamu ucap saja yaa.. \n\n' + event.message.text
+      });
+  }
 }
 
 app.listen(process.env.PORT || 3000);
