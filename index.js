@@ -63,10 +63,11 @@ Kalau tidak bobo digigit nyamuk 🎶
         });
       break;
     default:
-      return client.replyMessage(event.replyToken, {
-        type: 'text',
-        text: 'Aku tidak paham, jadi aku mengulang apa yang kamu ucap saja yaa.. \n\n' + event.message.text
-      });
+      return 
+      // return client.replyMessage(event.replyToken, {
+      //   type: 'text',
+      //   text: 'Aku tidak paham, jadi aku mengulang apa yang kamu ucap saja yaa.. \n\n' + event.message.text
+      // });
   }
 }
 
