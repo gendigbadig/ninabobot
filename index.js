@@ -19,6 +19,8 @@ function handleEvent(event) {
     return Promise.resolve(null);
   }
 
+  console.log(event);
+
   return client.replyMessage(event.replyToken, {
     type: 'text',
     text: event.message.text
