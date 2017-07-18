@@ -31,6 +31,16 @@ function handleEvent(event) {
   }
 
   switch (event.message.text) {
+    case "Hi NinaBoBot" || "hi ninabobot" || "Hi ninabobot" || "hi NinaBoBot":
+      return Promise.resolve(client.getProfile(event.source.userId))
+        .then((profile) => {
+          let displayName = profile.displayName;
+          return client.replyMessage(event.replyToken, {
+            type: 'text',
+            text: 'Hi juga ' + displayName
+          });
+        });
+      break;
     case "Aku ngantuk" || "aku ngantuk" || "Ngantuk" || "ngantuk" || "hoam" || "Hoam":
       return client.replyMessage(event.replyToken, {
         type: 'text',
