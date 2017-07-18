@@ -1,0 +1,12 @@
+{
+  "name": "ninabobot",
+  "version": "1.0.0",
+  "description": "LINE bot singing \"Nina Bobo\" song",
+  "main": "index.js",
+  "author": "gendigbadig",
+  "license": "MIT",
+  "dependencies": {
+    "@line/bot-sdk": "^2.0.0",
+    "express": "^4.15.3"
+  }
+}
